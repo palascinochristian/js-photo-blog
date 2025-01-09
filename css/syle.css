@@ -15,7 +15,27 @@ body{
     font-family: "Edu TAS Beginner", serif;
 }
 
+.container{
+    max-width: 70%;
+    margin: 0 auto;
+}
 
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    
+}
+
+.col{
+    width: 100%;
+    padding: 1rem;
+}
+
+.img-fluid{
+    width: 100%;
+    height: auto;
+}
 /*----------------
       HEADER
 ----------------*/
@@ -26,3 +46,22 @@ header{
     padding: 1.5rem 1.2rem;
     font-size: 2.375rem
 }
+
+/*----------------
+      MAIN
+----------------*/
+.card{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 1rem;
+    max-width: 100%;
+}
+.desc{
+    font-size: 1.5rem;
+    padding-bottom: 1.2rem;
+}
+.image{
+    min-width: 100%
+}
+
+
