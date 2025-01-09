@@ -24,6 +24,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     
 }
 
@@ -61,7 +62,38 @@ header{
     padding-bottom: 1.2rem;
 }
 .image{
-    min-width: 100%
+    min-width: 100%;
+    position: relative;
+}
+.pin{
+    width: 1.875rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
 }
 
+
+/*----------------
+  MEDIA QUERIES
+----------------*/
+
+/* from 768 to 1024*/
+
+@media screen and (min-width: 768px){
+
+    .col{
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container{
+        max-width: 55%;
+    }
+
+    .col{
+        width: calc(100% / 3);
+    }
+}
 
