@@ -6,9 +6,9 @@ const fullImg = (imgUrl) => {
     overlay.classList.add("active"); // Aggiungo la classe active per mostrarlo
 };
 
-
 //DOM ELEMENTS
 const photoboardElm = document.getElementById("photoboard")
+const overlayBtn = document.getElementById("overlay-btn")
 
 //EVENTS
 //on page load
@@ -36,6 +36,13 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
             card.addEventListener("click", () => fullImg(img.src)) //Al click passo il valore di img.src alla funzione fullImg che attiva l'overlay
         })
         });
+
+    //on close button click
+        overlayBtn.addEventListener("click", () => {
+        const overlay = document.getElementById("image-overlay")
+        overlay.classList.remove("active");
+        overlay.querySelector("img").src ="img/placeholder.png" //metto un'immagine placeholder quando non c'è nessun url ad overlay chiuso
+    })
 
 
 
