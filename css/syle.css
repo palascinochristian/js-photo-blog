@@ -62,12 +62,13 @@ header{
 
 }
 .card:hover{
-    transform: rotate(15deg);
+    transform: rotate(15deg) scale(1.1);
 }
 
 .desc{
     font-size: 1.5rem;
     padding-bottom: 1.2rem;
+    text-transform: capitalize;
 }
 .image{
     min-width: 100%;
