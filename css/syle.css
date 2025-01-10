@@ -98,8 +98,7 @@ header {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
-    /* display: none; */
-    display: flex;
+    display: none; 
     align-items: center;
     justify-content: center;
     z-index: 1000;
