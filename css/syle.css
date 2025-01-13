@@ -133,17 +133,16 @@ header {
   MEDIA QUERIES
 ----------------*/
 
-/* from 768 to 1024*/
+/* from 768px to x */
 
 @media screen and (min-width: 768px) {
 
     .col {
         width: calc(100% / 2);
     }
-    .image img {
-        object-fit: contain; /* Adatta meglio le immagini se necessario */
-    }
 }
+
+/* from 1024px to x */
 
 @media screen and (min-width: 1024px) {
 
