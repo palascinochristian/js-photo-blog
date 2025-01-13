@@ -21,7 +21,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
             <div class="col">
                 <div class="card">
                     <div class="image">
-                        <img src="${photo.url}" alt="img" class="img-fluid" onerror="this.src='img/placeholder.png';">
+                        <img src="${photo.url}" alt="${photo.title}" class="img-fluid" onerror="this.src='img/placeholder.png';">
                         <img src="img/pin.svg" class="pin">
                     </div>
                     <div class="desc">${photo.title}</div>
@@ -34,20 +34,12 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
         const cards = document.querySelectorAll(".card"); //Seleziono tutte le card dopo che sono state generate nel DOM
         cards.forEach((card) => { // Per ogni card, aggiungo l'evento listener , e al click prendo il valore di .src dell'img
             const img = card.querySelector("img");
+            const pin = card.querySelector(".pin"); //seleziono il pin per l'hover
             card.addEventListener("click", () => fullImg(img.src)) //Al click passo il valore di img.src alla funzione fullImg che attiva l'overlay
-            
+            //on card hover
+            card.addEventListener("mouseover", () => pin.style.display = "none");
+            card.addEventListener("mouseout", () => pin.style.display = "block");
         })
-
-        //on card hover
-         cards.forEach((card) => {
-            const pin = card.querySelector(".pin");
-            card.addEventListener("mouseover", () =>{
-                pin.style.display ="none";
-            })
-            card.addEventListener("mouseout", () =>{
-                pin.style.display ="block";
-            })
-         })
     })
 
 //on close button click
