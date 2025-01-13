@@ -21,7 +21,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
             <div class="col">
                 <div class="card">
                     <div class="image">
-                        <img src="${photo.url}" alt="img" class="img-fluid">
+                        <img src="${photo.url}" alt="img" class="img-fluid" onerror="this.src='img/placeholder.png';">
                         <img src="img/pin.svg" class="pin">
                     </div>
                     <div class="desc">${photo.title}</div>
@@ -35,6 +35,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
         cards.forEach((card) => { // Per ogni card, aggiungo l'evento listener , e al click prendo il valore di .src dell'img
             const img = card.querySelector("img");
             card.addEventListener("click", () => fullImg(img.src)) //Al click passo il valore di img.src alla funzione fullImg che attiva l'overlay
+            
         })
 
         //on card hover
